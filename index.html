@@ -8,6 +8,16 @@
     <link rel="stylesheet" href="TemplateData/style.css">
     <script src="TemplateData/UnityProgress.js"></script>
     <script src="Build/UnityLoader.js"></script>
+
+    <script>
+      UnityLoader.SystemInfo.mobile = false;
+      var gameInstance = UnityLoader.instantiate(
+        "gameContainer",
+        "Build/xxx.json",
+        { onProgress: UnityProgress }
+      );
+    </script>
+
     <script>
       var unityInstance = UnityLoader.instantiate("unityContainer", "Build/迷彩神経衰弱.json", {onProgress: UnityProgress});
     </script>
